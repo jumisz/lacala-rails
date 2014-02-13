@@ -37,14 +37,17 @@
     #menu{:class => 'menu'}
       %ul
         %li 
-          %a{ :href => "/"} Home
+          = link_to "Home", home_path 
+            
         %li
-          %a{ :href => "/pages/Food"} Food
-       
+          = link_to "Food", food_path 
+            
         %li
-          %a{ :href => "/pages/About"} About
+          = link_to "About", about_path 
+            
         %li
-          %a{ :href => "/pages/Contact"} Contact
+          = link_to "Contact", contact_path
+            
           
 
     #content

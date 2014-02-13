@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
-  get "site/home"
+  get "/", to: "site#home", as: 'home'
 
-  get "site/food"
+  get "/food", to: "site#food", as: 'food'
 
-  get "site/about"
+  get "/about",  to: "site#about", as: 'about'
 
-  get "site/contact"
+  get "/contact",  to: "site#contact", as: 'contact'
 
   mount Mercury::Engine => '/'
   Mercury::Engine.routes
 
-  root :to => "home#index"
+  root :to => "site#home"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
