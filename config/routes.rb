@@ -3,23 +3,19 @@ Rails.application.routes.draw do
       resources :images
     end
   devise_for :users
-  get "/", to: "site#home", as: 'home'
+  get "/", to: redirect('/home'), as: 'home'
 
-  get "/food", to: "site#food", as: 'food'
-
-  get "/about",  to: "site#about", as: 'about'
-
-  get "/contact",  to: "site#contact", as: 'contact'
+  get "/:title", to: "site#page", as: 'page'
 
   mount Mercury::Engine => '/'
   Mercury::Engine.routes
 
-  root :to => "site#home"
+  root :to => 'site#home'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
+  # You can have the root of your site parouted with "root"
   # root 'welcome#index'
 
   # Example of regular route:
