@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  get "admin/login"
 
     namespace :mercury do
       resources :images
     end
   get "/", to: redirect('/home'), as: 'home'
+
+  get "admin", to: "admin#index", as: 'admin_index'
+  post "admin/login", to: "admin#login", as: 'admin_login'
 
   get "/:title", to: "site#page", as: 'page'
 

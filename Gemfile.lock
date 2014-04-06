@@ -166,7 +166,7 @@ DEPENDENCIES
   mercury-rails!
   paper_trail (~> 3.0.0)
   paperclip
-  rails (= 4.1.0.rc1)
+  rails (~> 4.1.0.rc1)
   sass-rails (~> 4.0.0.rc1)
   sdoc
   spring

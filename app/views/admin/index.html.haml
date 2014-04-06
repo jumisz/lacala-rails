@@ -1,0 +1,10 @@
+#login
+  = form_tag(:action => :login) do
+    #login-user
+      = label_tag 'username'
+      = text_field_tag :username
+    
+    #login-pass
+      = label_tag 'password'
+      = text_field_tag :password
+    = submit_tag "Log In"

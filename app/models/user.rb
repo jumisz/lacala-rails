@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
 
+	attr_accessor :password 
 	before_save :encrypt_password
 	after_save :clear_password
+
 	def encrypt_password
 		if password.present?
 			self.salt = BCrypt::Engine.generate_salt
@@ -13,7 +15,8 @@ class User < ActiveRecord::Base
 	end
 
 	def self.authenticate(username="", login_password="")
-		user = User.find_by_username(username)
+
+		user = find_by username: username
 
 		if user && user.match_password(login_password)
 			return user
