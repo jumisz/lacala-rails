@@ -60,6 +60,6 @@ food.save!
 salt = BCrypt::Engine.generate_salt
 encrypted_password = BCrypt::Engine.hash_secret("test", salt)
 
-user = User.create(username: 'admin', encrypted_password: encrypted_password)
+user = User.create(username: 'admin', encrypted_password: encrypted_password, salt: salt)
 user.save!
 
