@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get "admin/login"
+
     namespace :mercury do
       resources :images
     end
-  devise_for :users
   get "/", to: redirect('/home'), as: 'home'
 
   get "/:title", to: "site#page", as: 'page'

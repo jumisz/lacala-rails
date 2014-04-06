@@ -56,3 +56,10 @@ food = Page.create( title: 'Food',   text: '<p> This is the food page </p>')
 
 food.save!
 
+# Admin password encryption
+salt = BCrypt::Engine.generate_salt
+encrypted_password = BCrypt::Engine.hash_secret("test", salt)
+
+user = User.create(name: 'admin', encrypted_password: encrypted_password)
+user.save!
+

@@ -48,7 +48,7 @@ gem 'unicorn'
 
 gem 'mercury-rails', github: 'jejacks0n/mercury'
 gem 'haml-rails'
-gem 'devise'
+gem 'bcrypt-ruby', :require => 'bcrypt' 
 gem "figaro", github: 'laserlemon/figaro'
 gem 'paperclip'
 gem 'paper_trail', '~> 3.0.0'
