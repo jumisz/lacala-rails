@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post "admin/login", to: "admin#login", as: 'admin_login'
 
   get "/:title", to: "site#page", as: 'page'
+  put "/:title", to: "site#update_page", as: 'update_page'
 
   mount Mercury::Engine => '/'
   Mercury::Engine.routes

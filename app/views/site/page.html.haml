@@ -1,2 +1,3 @@
 %article
-	!= @page[:text]
+  #page_text{:data => {:mercury => "full"}, :class => "mercury-region"}
+    != @page[:text]

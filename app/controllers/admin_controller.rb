@@ -11,7 +11,7 @@ class AdminController < ApplicationController
     if authorized_user
       session[:user_id] = authorized_user.id
       flash[:notice] = "You are logged in as #{authorized_user.username}"
-      redirect_to(:action => 'home')
+      redirect_to '/editor/Home'
     else
       flash[:notice] = "Invalid Username or Password"
       flash[:color]= "invalid"
@@ -21,6 +21,6 @@ class AdminController < ApplicationController
 
   def logout
     session[:user_id] = nil
-    redirect_to :action => 'login'
+    redirect_to :action => 'index'
   end
 end
