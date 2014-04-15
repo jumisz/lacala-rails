@@ -1,0 +1,7 @@
+%article
+  - @dishes.each do |dish|
+    #dish
+      #dish_text{:data => {:mercury => "full"}, :class => "mercury-region"}
+        != @dish[:text]
+      #dish_img{:data => {:mercury => "image"}, :class => "mercury-region"}
+        != @dish[:image]

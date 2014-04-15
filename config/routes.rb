@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "admin", to: "admin#index", as: 'admin_index'
   post "admin/login", to: "admin#login", as: 'admin_login'
 
+  get "/Food", to: "site#dishes", as: 'dishes'
   get "/:title", to: "site#page", as: 'page'
   put "/:title", to: "site#update_page", as: 'update_page'
 

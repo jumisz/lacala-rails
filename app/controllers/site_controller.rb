@@ -15,6 +15,12 @@ class SiteController < ApplicationController
     render :text => '{}'
   end
 
+  def dishes
+    @dishes = Dish.all
+
+
+  end
+
   private
 
   def find_page
