@@ -181,6 +181,7 @@ DEPENDENCIES
   paperclip
   pg
   rails (~> 4.1.0.rc1)
+  railties (~> 4.1.0.rc1)
   sass-rails (~> 4.0.0.rc1)
   sdoc
   spring
