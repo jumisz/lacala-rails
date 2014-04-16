@@ -7,6 +7,8 @@ class Mercury::Image < ActiveRecord::Base
         :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
         :url => "/system/:attachment/:id/:style/:filename"
 
+  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+
   delegate :url, :to => :image
 
   def serializable_hash(options = nil)

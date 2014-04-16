@@ -45,10 +45,11 @@ gem 'unicorn'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'mercury-rails', github: 'jejacks0n/mercury'
 gem 'haml-rails'
 gem 'bcrypt-ruby', :require => 'bcrypt' 
 gem "figaro", github: 'laserlemon/figaro'
 gem 'paperclip'
 gem 'paper_trail', '~> 3.0.0'
+gem 'forgery'

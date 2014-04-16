@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post "admin/login", to: "admin#login", as: 'admin_login'
 
   get "/Food", to: "site#dishes", as: 'dishes'
+  put "/Food", to: "site#update_dishes", as: 'update_dishes'
   get "/:title", to: "site#page", as: 'page'
   put "/:title", to: "site#update_page", as: 'update_page'
 

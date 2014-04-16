@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require 'forgery'
+
 home = Page.create( 
  title: "Home", 
  text: "<p>  Run by one of the <a href=\"http://www.bbc.co.uk/programmes/b006t1k5\">Masterchef</a> 2011 finalists.  
@@ -55,6 +57,13 @@ contact.save!
 food = Page.create( title: 'Food',   text: '<p> This is the food page </p>')
 
 food.save!
+
+# Add Dishes
+
+%w(paella flamenquin croquetas empanada).each do |dish_name|
+  dish = Dish.create(name: dish_name, text: Forgery(:lorem_ipsum).words(30), image: 'img/anchoas.jpg')
+  dish.save!
+end 
 
 # Admin password encryption
 salt = BCrypt::Engine.generate_salt
