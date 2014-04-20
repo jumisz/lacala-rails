@@ -16,9 +16,9 @@ class SiteController < ApplicationController
   end
 
   def dishes
-    @dishes = Dish.all
+    @dishes = Dish.all.order(:id)
     @page = Page.find_by_title 'Food'
-    session[:dishes] = @dishes
+    session[:dishes] = @dishes.map { |dish| dish.name }
   end
 
   def update_dishes
@@ -33,7 +33,7 @@ class SiteController < ApplicationController
       dish_text = content["dish_text_#{n}"][:value]
       dish_img = content["dish_img_#{n}"][:attributes][:src]
       logger.info "Saving Dish Image: #{dish_img}, Title: #{dish_title}"
-      dish = session[:dishes][n]
+      dish = Dish.find_by_name session[:dishes][n]
       dish[:name] = dish_title
       dish[:text] = dish_text
       dish[:image] = dish_img
