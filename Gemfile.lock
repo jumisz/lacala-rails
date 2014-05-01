@@ -57,6 +57,7 @@ GEM
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
     builder (3.2.2)
+    bxslider-rails (4.1.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
@@ -174,6 +175,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-session_store!
   bcrypt-ruby
+  bxslider-rails
   coffee-rails (~> 4.0.0)
   figaro!
   forgery

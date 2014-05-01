@@ -1,0 +1,23 @@
+#dish {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  width: 650px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.dish-name {
+  -webkit-column-span:all;
+  -moz-column-span:all;
+  column-span:all;
+
+ }
+
+ .dish-name h2 {
+  font-weight: bold;
+ }
+
+#dish img {
+  height: 360px;
+}
