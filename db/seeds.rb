@@ -59,9 +59,10 @@ food = Page.create( title: 'Food',   text: '<p> This is the food page </p>')
 food.save!
 
 # Add Dishes
+images = { "Empanada" => "empanada", "Jamon" => "jamon", "Salmorejo" => "salmorejo", "Torta de Santiago" => "santiago" }
 
-%w(paella flamenquin croquetas empanada).each do |dish_name|
-  dish = Dish.create(name: dish_name, text: Forgery(:lorem_ipsum).words(30), image: 'img/anchoas.jpg')
+images.each do |dish_name, img_name|
+  dish = Dish.create(name: dish_name, text: Forgery(:lorem_ipsum).words(30), image: "img/dishes/#{img_name}.jpg")
   dish.save!
 end 
 

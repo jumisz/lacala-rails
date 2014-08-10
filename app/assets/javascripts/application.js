@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bxslider
 //= require jquery.cycle2.min
 //= require jquery.cycle2.center
 //= require turbolinks

@@ -1,17 +1,14 @@
 %article
-  %header{:id => "food_header",  :data => {:mercury => "full"}, :class => "mercury-region"}
-    != @page[:text]
   
-    %div{:class => "slider cycle-slideshow", :data =>{:"cycle-fx" => "scrollHorz", :"cycle-timeout" => "2000", :"cycle-slides" => "#dish", "cycle-center-horz" => true} }
-      - @dishes.each_with_index do |dish,index|
-        #dish
-          %div{:id => "dish_title_#{index}", :data => {:mercury => "full", :name => "#{dish[:name]}"}, :class => "mercury-region dish-name"}
-            %h2
-              != dish[:name]
-          %div{:id => "dish_text_#{index}", :data => {:mercury => "full"}, :class => "mercury-region dish-text"}
-            != dish[:text]
-          #dish_img_wrapper
-            %img{:id => "dish_img_#{index}",:src => dish[:image],:data => {:mercury => "image"}, :class => "mercury-region"}
-    
+  %div{:class => "slider", :data =>{:"cycle-fx" => "scrollHorz", :"cycle-timeout" => "5000", "cycle-center-horz" => true, :"cycle-caption" => "#caption", :"cycle-caption-template" => "{{title}}"}} 
+    - @dishes.each_with_index do |dish,index|
+      %img{:id => "dish_img_#{index}",:src => dish[:image], :data => {:mercury => "image", :class => "mercury-region", :title => "#{dish[:name]}. #{dish[:text]}"}}
+      .invisible{:id => "dish_text_#{index}", :style => "display:none", :data => {:mercury => "simple"}, :class => "mercury-region"}
+        #{dish[:name]}. #{dish[:text]}
+
+  #caption
+      
+              
+      
 
 

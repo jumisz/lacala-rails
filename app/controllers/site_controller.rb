@@ -17,20 +17,17 @@ class SiteController < ApplicationController
 
   def dishes
     @dishes = Dish.all.order(:id)
-    @page = Page.find_by_title 'Food'
     session[:dishes] = @dishes.map { |dish| dish.name }
   end
 
   def update_dishes
     content = params[:content]
     page_text = content[:food_header]
-    @page = Page.find_by_title 'Food'
-    @page[:text] = page_text[:value]
-    @page.save!
 
     (0..3).each do |n|
-      dish_title = content["dish_title_#{n}"][:value]
-      dish_text = content["dish_text_#{n}"][:value]
+      dish_full = content["dish_text_#{n}"][:value].split('.')
+      dish_title = dish_full[0]
+      dish_text = dish_full[1]
       dish_img = content["dish_img_#{n}"][:attributes][:src]
       logger.info "Saving Dish Image: #{dish_img}, Title: #{dish_title}"
       dish = Dish.find_by_name session[:dishes][n]

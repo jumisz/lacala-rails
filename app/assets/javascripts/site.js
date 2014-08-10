@@ -12,12 +12,9 @@ var document_ready = function(){
 var ready = function() {
   if (window.location.href.indexOf('mercury_frame') > 0) {
     console.log('In admin site');
+    $('.invisible').show();
   } else {
-   $('.slider').bxSlider(
-    {
-      slidermargin: 20
-    });
-
+    $('.slider').cycle();
   }
   document_ready();
 }
