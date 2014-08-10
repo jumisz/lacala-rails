@@ -76,13 +76,6 @@ header {
     height: 100px;
 }
 
-header h1 {
-    font: 80px/80px 'Arapey-Italic', Arial, sans-serif;
-    padding-top: 70px;
-    padding-bottom: 8px;
-    padding-left: 0px;
-    margin: 0px;
-}
 
 h1, h2 {
     color: #FF8673;
@@ -90,8 +83,9 @@ h1, h2 {
 
 .logo {
     margin-left: 0px;
-    margin-top: -60px;
+    margin-top: -20px;
     height: 120px;
+    padding-bottom: 20px;
 }
 
 #main p {
@@ -102,6 +96,7 @@ h1, h2 {
 
     text-align: left;
     font: 36px/40px 'LatoLight', Arial, sans-serif;
+    margin-top: 110px;
 }
 
 .menu ul {
@@ -112,6 +107,10 @@ h1, h2 {
 .menu li {
     display: inline;
     padding-right: 30px;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .contact {

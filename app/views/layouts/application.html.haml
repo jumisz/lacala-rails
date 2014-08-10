@@ -28,12 +28,13 @@
   %body
     %header
      
-      %h1 
-        .logo
-          %a{ :href => "/"} La Cala Catering
+      
+      .logo
+        %a{ :href => "/"} 
+          %img{:src => image_url('logo.jpg'), :alt => "La Cala Catering"}
       %iframe{:src=>"http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.lacalacatering.com&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80",
        :scrolling=>"no", :frameborder=>"0",
-       :style=>"border:none; overflow:hidden; width:240px; height:40px; float:right; margin-top: -160px;" ,:allowTransparency=>"true"}
+       :style=>"border:none; overflow:hidden; width:240px; height:40px; float:right; margin-top: -100px;" ,:allowTransparency=>"true"}
     #menu{:class => 'menu'}
       %ul
         %li 

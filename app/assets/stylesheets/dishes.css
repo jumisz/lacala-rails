@@ -2,15 +2,17 @@
   -webkit-column-count: 2;
   -moz-column-count: 2;
   column-count: 2;
-  width: 650px;
-  height: 400px;
-  overflow: hidden;
-}
+ }
+
+ #dish div {
+  margin-left:60px;
+ }
 
 .dish-name {
   -webkit-column-span:all;
   -moz-column-span:all;
   column-span:all;
+  
 
  }
 
@@ -20,4 +22,20 @@
 
 #dish img {
   height: 360px;
+  float:right;
+  margin-right:70px;
 }
+
+.slider {
+  width: 640px;
+  position: relative;
+  overflow: auto;
+}
+
+.slider ul {
+  margin: 0;
+}
+
+
+
+
