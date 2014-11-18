@@ -1,6 +1,6 @@
 %article
   
-  %div{:class => "slider", :data =>{:"cycle-fx" => "scrollHorz", :"cycle-timeout" => "5000", "cycle-center-horz" => true, :"cycle-caption" => "#caption", :"cycle-caption-template" => "{{title}}"}} 
+  %div{:class => "slider", :data =>{:"cycle-fx" => "scrollHorz", :"cycle-timeout" => "10000", "cycle-center-horz" => true, :"cycle-caption" => "#caption", :"cycle-caption-template" => "{{title}}"}} 
     - @dishes.each_with_index do |dish,index|
       %img{:id => "dish_img_#{index}",:src => dish[:image], :data => {:mercury => "image", :class => "mercury-region", :title => "#{dish[:name]}. #{dish[:text]}"}}
       .invisible{:id => "dish_text_#{index}", :style => "display:none", :data => {:mercury => "simple"}, :class => "mercury-region"}

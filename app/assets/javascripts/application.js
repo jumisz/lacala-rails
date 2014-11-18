@@ -16,4 +16,7 @@
 //= require jquery.cycle2.center
 //= require turbolinks
 //= require site
-//= require admin
+//= require galleria-1.4.2.min
+//= require galleria.classic.min
+//= require galleria.flickr.min
+//= require gallery

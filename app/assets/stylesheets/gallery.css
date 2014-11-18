@@ -1,0 +1,10 @@
+.galleria {
+  min-height: 600px;
+  height: 600px;
+  width: 800px;
+
+}
+
+.galleria div {
+  background-position: center center;
+}

@@ -13,4 +13,6 @@
  *= require_tree .
  *= require_self
  *= require bxslider
+ *= require gallery
+ *= require galleria.classic.css
  */

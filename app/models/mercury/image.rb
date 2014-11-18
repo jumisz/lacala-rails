@@ -3,7 +3,7 @@ class Mercury::Image < ActiveRecord::Base
   self.table_name = :mercury_images
   
 
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" },
+  has_attached_file :image, :styles => { :medium => "600x400>", :thumb => "100x100>" },
         :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
         :url => "/system/:attachment/:id/:style/:filename"
 

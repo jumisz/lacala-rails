@@ -6,7 +6,6 @@ class Mercury::ImagesController < MercuryController
   def create
     
     @image = Mercury::Image.new(params.require(:image).permit(:image))
-    
     @image.save
     respond_with @image
   end

@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~>4.1.0.rc1'
-gem 'railties', '~>4.1.0.rc1'
+gem 'rails', '~>4.1.0'
+gem 'railties', '~>4.1.0'
 
 # Postgres database
 gem 'pg'
@@ -15,7 +15,7 @@ group :production do
 end
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+
     namespace :mercury do
       resources :images
     end
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
 
   get "admin", to: "admin#index", as: 'admin_index'
   post "admin/login", to: "admin#login", as: 'admin_login'
+
+  get "gallery", to: "gallery#index", as: 'gallery_index'
 
   get "/Food", to: "site#dishes", as: 'dishes'
   put "/Food", to: "site#update_dishes", as: 'update_dishes'
