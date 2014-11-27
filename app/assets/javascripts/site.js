@@ -6,6 +6,11 @@ var document_ready = function(){
     return letter.toUpperCase();
   })
   $('a[href$='+currentPage+']').addClass('bold');
+  if (currentPage == 'Gallery') {
+      Galleria.run('.galleria', {
+      flickr: 'set:72157625790610133',
+  });
+  }
 };
 
 var ready = function() {
@@ -17,6 +22,7 @@ var ready = function() {
    
       console.log('Enabling slider');
       $('.slider').cycle();
+
     
 
   }
