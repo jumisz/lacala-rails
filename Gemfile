@@ -58,6 +58,7 @@ gem 'haml-rails'
 gem 'bcrypt-ruby', :require => 'bcrypt' 
 gem "figaro", github: 'laserlemon/figaro'
 gem 'paperclip'
+gem "paperclip-dropbox"
 gem 'paper_trail', '~> 3.0.0'
 gem 'forgery'
 gem 'bxslider-rails'
