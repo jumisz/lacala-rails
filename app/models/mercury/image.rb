@@ -3,9 +3,10 @@ class Mercury::Image < ActiveRecord::Base
   self.table_name = :mercury_images
   
 
-  has_attached_file :image, :styles => { :medium => "600x400>", :thumb => "100x100>" },
-        :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
-        :url => "/system/:attachment/:id/:style/:filename"
+  has_attached_file :image, :styles => { :medium => "600x400>", :thumb => "100x100>" }, :storage => :dropbox,
+    :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+    :dropbox_options => {environment: ENV["RACK_ENV"]}
+       
 
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
 
