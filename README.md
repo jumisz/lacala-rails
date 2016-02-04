@@ -1,1 +1,1 @@
-La Cala Catering - Rails version
+# La Cala Catering - Rails version
